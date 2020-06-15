@@ -10,6 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_06_15_194100) do
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.string "min_temp"
+    t.string "max_temp"
+    t.string "avg_temp"
+    t.string "season"
+    t.string "avg_wind_direction"
+    t.string "earth_date"
+    t.string "planet_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end

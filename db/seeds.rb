@@ -10,4 +10,17 @@ require 'pry'
 
 json_nasa = RestClient.get("https://api.nasa.gov/insight_weather/?api_key=4NezTCgzWXnZKO5VghltfSR1bHpKiJzhntk6ysoQ&feedtype=json")
 parsed_nasa = JSON.parse(json_nasa)
-binding.pry
+parsed_nasa.map do |planet|
+    # binding.pry
+    Planet.create({
+        name: "Mars",
+        min_temp: planet[1]["AT"]["mn"].to_s,
+        max_temp: planet[1]["AT"]["mx"].to_s,
+        avg_temp: planet[1]["AT"]["av"].to_s,
+        season: planet[1]["Season"],
+        avg_wind_direction: planet[1]["WD"]["most_common"]["compass_point"],
+        earth_date: planet[1]["First_UTC"],
+        planet_date: planet[0]
+    })
+    # binding.pry
+end
