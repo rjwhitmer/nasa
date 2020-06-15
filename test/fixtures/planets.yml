@@ -2,20 +2,6 @@
 
 one:
   name: MyString
-  min_temp: MyString
-  max_temp: MyString
-  avg_temp: MyString
-  season: MyString
-  avg_wind_direction: MyString
-  earth_date: MyString
-  planet_date: MyString
 
 two:
   name: MyString
-  min_temp: MyString
-  max_temp: MyString
-  avg_temp: MyString
-  season: MyString
-  avg_wind_direction: MyString
-  earth_date: MyString
-  planet_date: MyString

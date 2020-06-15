@@ -10,19 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_194100) do
+ActiveRecord::Schema.define(version: 2020_06_15_205426) do
 
-  create_table "planets", force: :cascade do |t|
-    t.string "name"
+  create_table "planet_days", force: :cascade do |t|
     t.string "min_temp"
     t.string "max_temp"
     t.string "avg_temp"
     t.string "season"
     t.string "avg_wind_direction"
-    t.string "earth_date"
     t.string "planet_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.integer "planet_days_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["planet_days_id"], name: "index_planets_on_planet_days_id"
+  end
+
+  add_foreign_key "planets", "planet_days", column: "planet_days_id"
 end

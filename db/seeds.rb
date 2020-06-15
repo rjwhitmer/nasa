@@ -7,20 +7,27 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'pry'
+PlanetDay.destroy_all
+Planet.destroy_all
 
 json_nasa = RestClient.get("https://api.nasa.gov/insight_weather/?api_key=4NezTCgzWXnZKO5VghltfSR1bHpKiJzhntk6ysoQ&feedtype=json")
 parsed_nasa = JSON.parse(json_nasa)
-parsed_nasa.map do |planet|
+sol_keys = parsed_nasa["sol_keys"]
 
-    Planet.create({
-        name: "Mars",
-        min_temp: planet[1]["AT"]["mn"].to_s,
-        max_temp: planet[1]["AT"]["mx"].to_s,
-        avg_temp: planet[1]["AT"]["av"].to_s,
-        season: planet[1]["Season"],
-        avg_wind_direction: planet[1]["WD"]["most_common"]["compass_point"],
-        earth_date: planet[1]["First_UTC"],
-        planet_date: planet[0]
+
+days = sol_keys.map do |key|
+    PlanetDay.create({
+        min_temp: parsed_nasa[key]["AT"]["mn"],
+        max_temp: parsed_nasa[key]["AT"]["mx"],
+        avg_temp: parsed_nasa[key]["AT"]["av"],
+        season: parsed_nasa[key]["Season"],
+        avg_wind_direction: parsed_nasa[key]["WD"]["most_common"]["compass_point"],
+        planet_date: key,
     })
-
 end
+
+mars = Planet.create({
+    name: "Mars",
+    planet_days: days
+})
+binding.pry

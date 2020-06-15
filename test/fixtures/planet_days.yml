@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  min_temp: MyString
+  max_temp: MyString
+  avg_temp: MyString
+  season: MyString
+  avg_wind_direction: MyString
+  planet_date: MyString
+
+two:
+  min_temp: MyString
+  max_temp: MyString
+  avg_temp: MyString
+  season: MyString
+  avg_wind_direction: MyString
+  planet_date: MyString
