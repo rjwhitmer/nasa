@@ -22,5 +22,5 @@ parsed_nasa.map do |planet|
         earth_date: planet[1]["First_UTC"],
         planet_date: planet[0]
     })
-    # binding.pry
+
 end
