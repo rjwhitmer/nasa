@@ -19,17 +19,17 @@ ActiveRecord::Schema.define(version: 2020_06_15_205426) do
     t.string "season"
     t.string "avg_wind_direction"
     t.string "planet_date"
+    t.integer "planet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["planet_id"], name: "index_planet_days_on_planet_id"
   end
 
   create_table "planets", force: :cascade do |t|
     t.string "name"
-    t.integer "planet_days_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["planet_days_id"], name: "index_planets_on_planet_days_id"
   end
 
-  add_foreign_key "planets", "planet_days", column: "planet_days_id"
+  add_foreign_key "planet_days", "planets"
 end

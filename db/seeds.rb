@@ -14,6 +14,9 @@ json_nasa = RestClient.get("https://api.nasa.gov/insight_weather/?api_key=4NezTC
 parsed_nasa = JSON.parse(json_nasa)
 sol_keys = parsed_nasa["sol_keys"]
 
+mars = Planet.create({
+    name: "Mars"
+})
 
 days = sol_keys.map do |key|
     PlanetDay.create({
@@ -23,11 +26,8 @@ days = sol_keys.map do |key|
         season: parsed_nasa[key]["Season"],
         avg_wind_direction: parsed_nasa[key]["WD"]["most_common"]["compass_point"],
         planet_date: key,
+        planet: mars
     })
 end
 
-mars = Planet.create({
-    name: "Mars",
-    planet_days: days
-})
-binding.pry
+# binding.pry

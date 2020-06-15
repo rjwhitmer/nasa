@@ -8,7 +8,7 @@ class CreatePlanetDays < ActiveRecord::Migration[6.0]
       t.string :avg_wind_direction
       t.string :planet_date
 
-      
+      t.references :planet, foreign_key: true
       t.timestamps
     end
   end
