@@ -11,7 +11,7 @@ require 'pry'
 json_nasa = RestClient.get("https://api.nasa.gov/insight_weather/?api_key=4NezTCgzWXnZKO5VghltfSR1bHpKiJzhntk6ysoQ&feedtype=json")
 parsed_nasa = JSON.parse(json_nasa)
 parsed_nasa.map do |planet|
-    # binding.pry
+
     Planet.create({
         name: "Mars",
         min_temp: planet[1]["AT"]["mn"].to_s,
