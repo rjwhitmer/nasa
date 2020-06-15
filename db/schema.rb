@@ -10,25 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_162914) do
+ActiveRecord::Schema.define(version: 0) do
 
-  create_table "astronauts", force: :cascade do |t|
-    t.string "name"
-    t.string "years_avtive"
-    t.integer "mission_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["mission_id"], name: "index_astronauts_on_mission_id"
-  end
-
-  create_table "missions", force: :cascade do |t|
-    t.string "program"
-    t.string "vehicle"
-    t.string "description"
-    t.string "timeframe"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "astronauts", "missions"
 end
