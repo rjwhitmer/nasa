@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'require_all'
 require 'pry'
+require_all './db/planet_images'
 PlanetDay.destroy_all
 Planet.destroy_all
 
@@ -16,7 +18,8 @@ sol_keys = parsed_nasa["sol_keys"]
 
 mercury = Planet.create({
     name: "Mercury",
-    picture: "http://www.simpleimageresizer.com/_uploads/photos/10ee2506/AW_Mercury_ladprw_25.jpg"
+    picture: "./mercury.jpg",
+    description: "Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes 87.97 days, the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger of the gods."
 })
 
 7.times do
@@ -32,7 +35,9 @@ mercury = Planet.create({
 end
 
 venus = Planet.create({
-    name: "Venus"
+    name: "Venus",
+    picture: "./Venus.jpg",
+    description: "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the second-brightest natural object in the night sky after the Moon, Venus can cast shadows and can be, on rare occasion, visible to the naked eye in broad daylight. Venus lies within Earth's orbit, and so never appears to venture far from the Sun, either setting in the west just after dusk or rising in the east a bit before dawn. Venus orbits the Sun every 224.7 Earth days. With a rotation period of 243 Earth days, it takes longer to rotate about its axis than any other planet in the Solar System and does so in the opposite direction to all but Uranus (meaning the Sun rises in the west and sets in the east). Venus does not have any moons, a distinction it shares only with Mercury among planets in the Solar System"
 })
 
 7.times do
@@ -48,11 +53,13 @@ venus = Planet.create({
 end
 
 earth = Planet.create({
-    name: "Earth"
+    name: "Earth",
+    picture: "./earth.jpg",
+    description: "Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating estimation and other evidence, Earth formed over 4.5 billion years ago. Earth's gravity interacts with other objects in space, especially the Sun and the Moon, which is Earth's only natural satellite."
 })
 
+day = 0
 7.times do
-    day = 0
     forecast = (Date.today + day).to_s
     PlanetDay.create({
         min_temp: Faker::Number.between(from: -20, to: 10).to_s,
@@ -67,7 +74,9 @@ earth = Planet.create({
 end
 
 mars = Planet.create({
-    name: "Mars"
+    name: "Mars",
+    picture: "./mars.jpg",
+    description: "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being only larger than Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the 'Red Planet'."
 })
 
 days = sol_keys.map do |key|
@@ -83,7 +92,9 @@ days = sol_keys.map do |key|
 end
 
 jupiter = Planet.create({
-    name: "Juipter"
+    name: "Juipter",
+    picture: "./juipter.jpg",
+    description: "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history."
 })
 
 7.times do
@@ -99,7 +110,9 @@ jupiter = Planet.create({
 end
 
 saturn = Planet.create({
-    name: "Saturn"
+    name: "Saturn",
+    picture: "./saturn.jpg",
+    description: "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine times that of Earth. It only has one-eighth the average density of Earth; however, with its larger volume, Saturn is over 95 times more massive."
 })
 
 7.times do
@@ -115,7 +128,9 @@ saturn = Planet.create({
 end
 
 uranus = Planet.create({
-    name: "Uranus"
+    name: "Uranus",
+    picture: "./uranus.jpg",
+    description: "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have bulk chemical compositions which differ from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus and Neptune as 'ice giants' to distinguish them from the gas giants. "
 })
 
 7.times do
@@ -131,7 +146,9 @@ uranus = Planet.create({
 end
 
 neptune = Planet.create({
-    name: "Neptune"
+    name: "Neptune",
+    picture: "./neptune.jpg",
+    description: "Neptune is the eighth and farthest known planet from the Sun in the Solar System. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. Neptune is 17 times the mass of Earth, slightly more massive than its near-twin Uranus."
 })
 
 7.times do
