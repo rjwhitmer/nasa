@@ -19,223 +19,52 @@ mercury = Planet.create({
     picture: "http://www.simpleimageresizer.com/_uploads/photos/10ee2506/AW_Mercury_ladprw_25.jpg"
 })
 
-PlanetDay.create({
-    min_temp: "-155",
-    max_temp: "327",
-    avg_temp: "86",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: mercury
-})
-
-PlanetDay.create({
-    min_temp: "-156",
-    max_temp: "330",
-    avg_temp: "86",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: mercury
-})
-
-PlanetDay.create({
-    min_temp: "-150",
-    max_temp: "334",
-    avg_temp: "90",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: mercury
-})
-
-PlanetDay.create({
-    min_temp: "-150",
-    max_temp: "335",
-    avg_temp: "90",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: mercury
-})
-
-PlanetDay.create({
-    min_temp: "-150",
-    max_temp: "337",
-    avg_temp: "90",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: mercury
-})
-
-PlanetDay.create({
-    min_temp: "-151",
-    max_temp: "340",
-    avg_temp: "90",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: mercury
-})
-
-PlanetDay.create({
-    min_temp: "-152",
-    max_temp: "344",
-    avg_temp: "90",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: mercury
-})
+7.times do
+    PlanetDay.create({
+        min_temp: Faker::Number.between(from: -175, to: -135).to_s,
+        max_temp: Faker::Number.between(from: 330, to: 375).to_s,
+        avg_temp: Faker::Number.between(from: 75, to: 100).to_s,
+        season: "N/A",
+        avg_wind_direction: "N/A",
+        planet_date: "1",
+        planet: mercury
+    })
+end
 
 venus = Planet.create({
     name: "Venus"
 })
 
-PlanetDay.create({
-    min_temp: "850",
-    max_temp: "870",
-    avg_temp: "860",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: venus
-})
-
-PlanetDay.create({
-    min_temp: "850",
-    max_temp: "870",
-    avg_temp: "860",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: venus
-})
-
-PlanetDay.create({
-    min_temp: "850",
-    max_temp: "870",
-    avg_temp: "860",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: venus
-})
-
-PlanetDay.create({
-    min_temp: "850",
-    max_temp: "870",
-    avg_temp: "860",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: venus
-})
-
-PlanetDay.create({
-    min_temp: "850",
-    max_temp: "870",
-    avg_temp: "860",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: venus
-})
-
-PlanetDay.create({
-    min_temp: "850",
-    max_temp: "870",
-    avg_temp: "860",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: venus
-})
-
-PlanetDay.create({
-    min_temp: "850",
-    max_temp: "870",
-    avg_temp: "860",
-    season: "N/A",
-    avg_wind_direction: "N/A",
-    planet_date: "1",
-    planet: venus
-})
+7.times do
+    PlanetDay.create({
+        min_temp: Faker::Number.between(from: 860, to: 870).to_s,
+        max_temp: Faker::Number.between(from: 850, to: 860).to_s,
+        avg_temp: Faker::Number.between(from: 855, to: 865).to_s,
+        season: "N/A",
+        avg_wind_direction: "N/A",
+        planet_date: "1",
+        planet: venus
+    })
+end
 
 earth = Planet.create({
     name: "Earth"
 })
 
-PlanetDay.create({
-    min_temp: "-100", 
-    max_temp:  "100",
-    avg_temp:  "0",
-    season:  "Summer",
-    avg_wind_direction: "NNE",    
-    planet_date: "2020-06-16",
-    planet: earth
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: earth
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: earth
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: earth
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: earth
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: earth
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: earth
-})
+7.times do
+    day = 0
+    forecast = (Date.today + day).to_s
+    PlanetDay.create({
+        min_temp: Faker::Number.between(from: -20, to: 10).to_s,
+        max_temp: Faker::Number.between(from: 5, to: 50).to_s,
+        avg_temp: Faker::Number.between(from: -5, to: 25).to_s,
+        season: "Summer",
+        avg_wind_direction: Faker::Compass.half_wind_abbreviation,
+        planet_date: forecast,
+        planet: earth
+    })
+    day += 1
+end
 
 mars = Planet.create({
     name: "Mars"
@@ -257,294 +86,62 @@ jupiter = Planet.create({
     name: "Juipter"
 })
 
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: jupiter
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: jupiter
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: jupiter
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: jupiter
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: jupiter
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: jupiter
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: jupiter
-})
+7.times do
+    PlanetDay.create({
+        min_temp: Faker::Number.between(from: -350, to: -200).to_s,
+        max_temp: Faker::Number.between(from: -250, to: -100).to_s,
+        avg_temp: Faker::Number.between(from: -300, to: -225).to_s,
+        season: "Summer",
+        avg_wind_direction: Faker::Compass.half_wind_abbreviation,
+        planet_date: "1",
+        planet: jupiter
+    })
+end
 
 saturn = Planet.create({
     name: "Saturn"
 })
 
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: saturn
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: saturn
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: saturn
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: saturn
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: saturn
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: saturn
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: saturn
-})
+7.times do
+    PlanetDay.create({
+        min_temp: Faker::Number.between(from: -173, to: -125).to_s,
+        max_temp: Faker::Number.between(from: -150, to: -114).to_s,
+        avg_temp: Faker::Number.between(from: -160, to: -120).to_s,
+        season: "Summer",
+        avg_wind_direction: Faker::Compass.half_wind_abbreviation,
+        planet_date: "1",
+        planet: saturn
+    })
+end
 
 uranus = Planet.create({
     name: "Uranus"
 })
 
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: uranus
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: uranus
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: uranus
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: uranus
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: uranus
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: uranus
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: uranus
-})
+7.times do
+    PlanetDay.create({
+        min_temp: Faker::Number.between(from: -373, to: -330).to_s,
+        max_temp: Faker::Number.between(from: -350, to: -300).to_s,
+        avg_temp: Faker::Number.between(from: -360, to: -340).to_s,
+        season: "Summer",
+        avg_wind_direction: Faker::Compass.half_wind_abbreviation,
+        planet_date: "1",
+        planet: uranus
+    })
+end
 
 neptune = Planet.create({
     name: "Neptune"
 })
 
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: neptune
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: neptune
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: neptune
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: neptune
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: neptune
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: neptune
-})
-
-PlanetDay.create({
-    min_temp: "-100",
-    max_temp: "100",
-    avg_temp: "0",
-    season: "Summer",
-    avg_wind_direction: "NNE",
-    planet_date: "2020-06-16",
-    planet: neptune
-})
+7.times do
+    PlanetDay.create({
+        min_temp: Faker::Number.between(from: -373, to: -330).to_s,
+        max_temp: Faker::Number.between(from: -350, to: -300).to_s,
+        avg_temp: Faker::Number.between(from: -360, to: -340).to_s,
+        season: "Summer",
+        avg_wind_direction: Faker::Compass.half_wind_abbreviation,
+        planet_date: "1",
+        planet: neptune
+    })
+end
