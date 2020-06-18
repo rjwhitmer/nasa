@@ -19,6 +19,8 @@ gem 'puma', '~> 4.1'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
 
+gem 'whenever', :require => false
+
 gem 'require_all', '~> 3.0'
 
 gem 'faker'
