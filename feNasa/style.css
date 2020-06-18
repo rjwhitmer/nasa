@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 10px;
+    border-color: rgb(204, 89, 51, 0.7);
+    padding: 0.5em;
+    border-radius: 10%;
+    max-width: 1700px;
+
+}
+
+div {
+    padding: 10px 35px;
+    color: white;
+    border-color: rgb(0, 0, 0);
+}
+
+h1 {
+    background: rgba(145, 140, 142, 0.671);
+    text-align: center;
+    color: white;
+   
+}
+
+body {
+    line-height: 1.8;
+    /* margin: 4em; */
+    background: url("space.jpg") no-repeat center center fixed; 
+    /* overflow: hidden; */
+    background-size: cover;
+    color: white;
+
+}
+.button {   
+    border: none;
+    color: blue;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px auto;
+  }
+  
+
+.planetDate {border-radius: 20%;}
+
+body > div {
+    border-right: solid 1px;
+    display: flex;
+    justify-content: center;
+    background: none;
+
+}
+
+p, h3 {
+    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+p {
+    font-size: 18px;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+h3 {
+    font-size: 32px;
+    border-bottom: solid 1px;
+    color: blue;
+}
+body, h1 {
+    font-family: "Raleway", sans-serif;
+}
+body > h2{
+    color:white;
+    background: rgba(145, 140, 142, 0.671);
+}

@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+   
+    
+    background: url("homebackground.jpg") no-repeat center fixed; 
+    background-size: cover;
+    /* https://mars.nasa.gov/system/resources/detail_files/24833_PIA23624_hutton-selfie-web.jpg"
+     */
+
+    font: 300 1em 'Fira Sans', sans-serif;
+    
+
+    /* justify-content: center; */
+    /* align-content: center; */
+    
+   
+    /* min-height: 100vh; */
+    
+}
+ ol, ul {
+	list-style: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+
+.child {
+   
+    visibility: hidden;
+   
+}
+
+.parent:hover .child {
+ 
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-bottom: 1500px;
+    visibility: visible;
+}
+
+
+
+.Planets-List{
+    
+    max-width: fit-content;
+    /* margin: auto; */
+    display: flex;
+
+    /* height: 500px;
+    width: 10px; */
+    justify-content: left;
+    align-items: flex-end;
+    flex-direction: column;
+
+
+
+  
+}
+
+.Planets-List > div{
+    height: 50px;
+    width: 110px;
+    margin: auto;
+    justify-content: left;
+
+    /* margin-right: auto; */
+    background: rgba(146, 146,142, 0.5);
+
+    
+}
+
+
+
+.page_title{
+    text-align: center;
+    font-size: 76px;
+    background: rgba(126, 146,142, 0.5);
+    bottom: 50%;
+    
+    max-width: auto;
+
+}
+
+/* h1 { font-weight: 900; } */
+
+

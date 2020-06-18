@@ -1,7 +1,14 @@
 class PlanetsController < ApplicationController
     def index
-        @planets = Planet.all
-        render json: @planets, include: [:planet_days]
+        # if params["name"]
+        #     @planets = Planet.where("name LIKE ?", "%#{params["name"]}%")
+        #     render json: @planets, include: [:planet_days]
+        # else
+            @planets = Planet.all
+            render json: @planets, include: [:planet_days]
+
+        # end
+       
     end
 
     def show
