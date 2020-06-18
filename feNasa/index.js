@@ -29,7 +29,7 @@ function showPlanets(planets){
                 <a href='newshow.html?id=${planet.id}' aria-haspopup="true>
                 <button class="button pulse">${planet.name}</button>
                 </a>
-                <img class='child' src='${planet.name}.jpg'>
+                <img class='child' src='images/${planet.name}.jpg'>
                 </p>  
         
         `
