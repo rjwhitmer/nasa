@@ -33,10 +33,10 @@ function dailyWeather(planet){
         let p4 = document.createElement('p')
         let h3 = document.createElement('h3')
         
-        p1.innerText = `Today's High: ${day.max_temp}`
-        p2.innerText = `Today's Low: ${day.min_temp}`
-        p3.innerText = `Wind Direction: ${day.avg_wind_direction}`
-        p4.innerText = `Average Temperature: ${day.avg_temp}`
+        p1.innerText = `Today's High: \n${day.max_temp}°C`
+        p2.innerText = `Today's Low: \n${day.min_temp}°C`
+        p3.innerText = `Wind Direction: \n${day.avg_wind_direction}`
+        p4.innerText = `Average Temperature: \n${day.avg_temp}°C`
         h3.innerHTML = `
         <a><button class = "button planetDate">Sol ${day.planet_date}</button></a>
         

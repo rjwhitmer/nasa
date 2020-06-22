@@ -9,37 +9,35 @@ fetch(baseURL)
 const mainTag = document.querySelector("main")
 
 
+const main = document.querySelector("main")
 
 function showPlanets(planets){
     
     planets.forEach(planet => {
         console.log(planet.name)
- 
         
-        const div = document.createElement('div')
-        const $div = document.createElement('div.table')
-        
-        const $uls = document.createElement("ul")
-        const $lis = document.createElement("li")
-        // const $myPs = document.createElement("p")
+        const flipCard = document.createElement('div')
+        const divInner = document.createElement('div')
+        const divFront = document.createElement('div')
+        const divBack = document.createElement('div')
+        const pFront = document.createElement("p")
+        const pBack = document.createElement("p")
 
-        // // $myPs.textContent = "Planet Name" 
-        div.className = planet.name
-        $lis.innerHTML = ` <p class='parent'>
-                <a href='newshow.html?id=${planet.id}' aria-haspopup="true>
-                <button class="button pulse">${planet.name}</button>
-                </a>
-                <img class='child' src='images/${planet.name}.jpg'>
-                </p>  
-        
-        `
-         
-        $uls.append($lis)
-       
-        $uls.append($lis)
-        $div.append($uls)
-        div.append($div)
+        pFront.innerText = `How's the weather on ${planet.name}?`
 
-        mainTag.append(div)
+        pBack.innerHTML = `<a href='newshow.html?id=${planet.id}'><img class='child' src='images/${planet.name}.jpg'></a>`
+
+        flipCard.className = "flip-card"
+        divInner.className = "flip-card-inner"
+        divFront.className = "flip-card-front"
+        divBack.className = "flip-card-back"
+            
+        
+        divFront.append(pFront)
+        divBack.append(pBack)
+        divInner.append(divFront)
+        divInner.append(divBack)
+        flipCard.append(divInner)
+        main.append(flipCard)
     })
 }
